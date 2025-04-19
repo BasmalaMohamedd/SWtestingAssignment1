@@ -86,19 +86,19 @@ public class YearTest
     public void testEqualsYear1IsEqualYear2DifferentTypes() {
         Year y1 = new Year(2022);
         java.time.Year y2 = java.time.Year.of(2022);
-        assertFalse(y1.equals(y2));  
+        assertFalse(y1.equals(y2));  // different object type
     }
 
     @Test
     public void testEqualsYear2IsNotAYear() {
         Year y1 = new Year(2022);
         String y2 = "2022";
-        assertFalse(y1.equals(y2));  
+        assertFalse(y1.equals(y2));  // different object type
     }
     @Test
     public void testEqualsYear2IsNull() {
         Year y1 = new Year(2022);
-        String y2 = null;
+        Year y2 = null;
         assertFalse(y1.equals(y2));  // different object type
     }
 
